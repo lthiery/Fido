@@ -107,18 +107,24 @@ void loop(){
   }
 
   //now do a normal routine
-  
   //if freq has elapsed since last log, log temp
   if(now.minute()-stamp[0]>=fido.getFreq() ||now.minute()-stamp[0]<0 || samples==0 ){
+     Serial.println("logging");
      stamp[0]=now.minute();
      char date[11];char time[10];
      refreshDate(now,date,time);
-     logfile.print(date);
-     logfile.print(',');
-     logfile.print(time);
-     logfile.print(',');
-     logfile.println(temp);
-     logfile.close();
+     
+    // if (logfile){
+       logfile.print(date);
+       logfile.print(',');
+       logfile.print(time);
+       logfile.print(',');
+       logfile.println(temp);
+       logfile.flush();
+   //  }
+   //  else Serial.println("SD card error");
+     
+
      
      if(temp>high || samplesNum==0) high=temp;
      if(temp<low || samplesNum==0) low=temp;
@@ -436,15 +442,19 @@ void initializeStampsAndFile(){
     return;
   }
   // create a new file
-  char filename[] = "LOGGER00.CSV";
+  char filename[] = "LOGGER00.txt";
   for (uint8_t i = 0; i < 100; i++) {
     filename[6] = i/10 + '0';
     filename[7] = i%10 + '0';
     if (! SD.exists(filename)) {
       // only open a new file if it doesn't exist
       logfile = SD.open(filename, FILE_WRITE); 
+      Serial.print("logfile \'");
+      Serial.print(filename);
+      Serial.println("\' opened");
       break;  // leave the loop!
     }
+    //else Serial.println("Failed SD intialize");
   }
 }
 
