@@ -1,0 +1,6 @@
+[submodule "Libraries/RTC"]
+	path = Libraries/RTC
+	url = https://github.com/adafruit/RTClib.git
+[submodule "Libraries/GSMSerial"]
+	path = Libraries/GSMSerial
+	url = git@github.com:lthiery/GSMSerial.git
