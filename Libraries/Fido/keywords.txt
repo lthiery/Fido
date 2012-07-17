@@ -1,0 +1,54 @@
+#######################################
+# Syntax Coloring Map For Fido
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Fido	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+start	KEYWORD2
+ifAlarm	KEYWORD2
+setIfAlarm	KEYWORD2
+ifUpdates	KEYWORD2
+setIfUpdates	KEYWORD2
+ifDailySummary	KEYWORD2
+setIfDailySummary	KEYWORD2
+ifPrivate	KEYWORD2
+setIfPrivate	KEYWORD2
+setFreq		KEYWORD2
+getFreq		KEYWORD2
+setUB		KEYWORD2
+getUB		KEYWORD2
+setLB		KEYWORD2
+getLB		KEYWORD2
+setUpdateFreq	KEYWORD2
+getUpdateFreq	KEYWORD2
+setUpdateBegin	KEYWORD2
+getUpdateBegin KEYWORD2
+setUpdateEnd   KEYWORD2
+getUpdateEnd   KEYWORD2
+setSummaryTime KEYWORD2
+getSummaryTime KEYWORD2
+setOwner       KEYWORD2
+getOwner       KEYWORD2
+clearUsers     KEYWORD2
+addUser	       KEYWORD2
+getUserGroup   KEYWORD2
+getUserContact KEYWORD2
+removeUser     KEYWORD2
+findUser       KEYWORD2
+setPin	       KEYWORD2
+isPin	       KEYWORD2
+printUsers     KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+num (LITERAL1)
